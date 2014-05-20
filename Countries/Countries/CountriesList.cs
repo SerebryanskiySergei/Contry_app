@@ -17,9 +17,9 @@ namespace Countries
         private static CountriesList _instance;
 
         private CountriesList()
-        {
-            dataCountries = new List<ICountry>();
-        }
+        {                                                  //Пока что класс пустой.
+            dataCountries = new List<ICountry>();          //Нужно придумать организацию класса Country и потом уже   
+        }                                                  // создавать их здесь(или создать фабрику) и добавлять в список.
 
         public static CountriesList GetInstance()
         {
