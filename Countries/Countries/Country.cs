@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace Countries
 {
@@ -10,13 +7,20 @@ namespace Countries
     {
         private readonly string _name;
         private readonly string _description;
-        public Country(string name)
+        private readonly Point _mapPoint;
+        private readonly Image _countryImage;
+        public Country(string name,string description,Point mapPoint,Image countryImage)
         {
             _name = name;
+            _description = description;
+            _mapPoint = mapPoint;
+            _countryImage = countryImage;
         }
-        public void Draw()
+
+        public void Draw(Bitmap currentImage)
         {
-            throw new NotImplementedException();            //Придумать и реализовать!
+            Graphics g = Graphics.FromImage(currentImage);
+            g.DrawImage(_countryImage,_mapPoint);
         }
 
         public string GetName()

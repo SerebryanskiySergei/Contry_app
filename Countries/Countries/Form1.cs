@@ -1,32 +1,47 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Countries
 {
     public partial class Form1 : Form
     {
-        private ICountriesList countriesList;
+        /// <summary>
+        /// Список стран.
+        /// </summary>
+        private ICountriesList _countriesList;
+        /// <summary>
+        /// Картинка, которая отображается в mapPictureBox в любой момент времени.
+        /// </summary>
+        private Bitmap _currentImage;
+        /// <summary>
+        /// Чистая крата без выделенных участков.
+        /// </summary>
+        private Image _backgroundImage;
         public Form1()
         {
             InitializeComponent();
-            countriesList = CountriesList.GetInstance(); 
-            foreach (ICountry country in countriesList)
+            _backgroundImage = mapPictureBox.Image;
+            _currentImage = new Bitmap(_backgroundImage,mapPictureBox.Width,mapPictureBox.Height);
+            _countriesList = CountriesList.GetInstance(); 
+            mapPictureBox.Image = new Bitmap(_currentImage);
+            foreach (ICountry country in _countriesList)
                 countriesListBox.Items.Add(country.GetName());
             
         }
 
         private void countryList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (countriesList.IsExist(countriesListBox.SelectedIndex.ToString()))
-                countriesList.Find(countriesListBox.SelectedIndex.ToString()).Draw();
+            _currentImage = new Bitmap(_backgroundImage, mapPictureBox.Width, mapPictureBox.Height); //рисуем фон (чистую карту)
+            if (_countriesList.IsExist(countriesListBox.SelectedIndex.ToString()))
+                _countriesList.Find(countriesListBox.SelectedIndex.ToString()).Draw(_currentImage); //рисуем выделенный участок
+            Invalidate();                       //вызывем перерисовку формы
         }
 
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            e.Graphics.DrawImageUnscaled(_currentImage,0,0);
+        }
     }
 }

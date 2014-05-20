@@ -1,11 +1,13 @@
-﻿namespace Countries
+﻿using System.Drawing;
+
+namespace Countries
 {
     interface ICountry
     {
         /// <summary>
         /// Выделить страну на карте.
         /// </summary>
-        void Draw();
+        void Draw(Bitmap currentImage);
         /// <summary>
         /// Получить название страны.
         /// </summary>
