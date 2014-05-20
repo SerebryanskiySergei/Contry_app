@@ -16,9 +16,9 @@ namespace Countries
         public Form1()
         {
             InitializeComponent();
-            // + создать объект countriesList
+            countriesList = CountriesList.GetInstance(); 
             foreach (ICountry country in countriesList)
-                this.countriesListBox.Items.Add(country.GetName());
+                countriesListBox.Items.Add(country.GetName());
             
         }
 
