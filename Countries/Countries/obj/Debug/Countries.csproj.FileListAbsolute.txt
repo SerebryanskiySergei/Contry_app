@@ -1,1 +1,2 @@
 D:\Универ\2,5 курс практика\ООП\Countries\Countries\bin\Debug\Countries.exe.config
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\bin\Debug\Countries.exe.config
