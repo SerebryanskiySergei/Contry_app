@@ -1,2 +1,10 @@
 D:\Универ\2,5 курс практика\ООП\Countries\Countries\bin\Debug\Countries.exe.config
 D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\bin\Debug\Countries.exe.config
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.exe
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.pdb
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\bin\Debug\Countries.exe
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\bin\Debug\Countries.pdb
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.csprojResolveAssemblyReference.cache
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.ChooseCountryForm.resources
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.Properties.Resources.resources
+D:\Универ\2,5 курс практика\ООП\Git\Countries\Countries\obj\Debug\Countries.csproj.GenerateResource.Cache

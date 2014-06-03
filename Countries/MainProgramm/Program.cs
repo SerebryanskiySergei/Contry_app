@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Countries
+namespace MainProgramm
 {
     static class Program
     {
@@ -13,7 +13,7 @@ namespace Countries
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChooseCountryForm());
+            Application.Run(new MainForm());
         }
     }
 }

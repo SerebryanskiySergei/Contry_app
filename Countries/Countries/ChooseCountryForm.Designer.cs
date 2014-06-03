@@ -1,6 +1,6 @@
 ﻿namespace Countries
 {
-    partial class Form1
+    partial class ChooseCountryForm
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseCountryForm));
             this.mapPictureBox = new System.Windows.Forms.PictureBox();
             this.countriesListBox = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,7 +81,7 @@
             this.InfoLabel.TabIndex = 4;
             this.InfoLabel.Text = "Информация ";
             // 
-            // Form1
+            // ChooseCountryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -91,7 +91,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.countriesListBox);
             this.Controls.Add(this.mapPictureBox);
-            this.Name = "Form1";
+            this.Name = "ChooseCountryForm";
             this.Text = "Страны мира";
             ((System.ComponentModel.ISupportInitialize)(this.mapPictureBox)).EndInit();
             this.ResumeLayout(false);

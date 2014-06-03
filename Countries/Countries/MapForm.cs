@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Countries
 {
-    public partial class Form1 : Form
+    public partial class MapForm : Form
     {
         /// <summary>
         /// Список стран.
@@ -18,7 +18,7 @@ namespace Countries
         /// Чистая крата без выделенных участков.
         /// </summary>
         private Image _backgroundImage;
-        public Form1()
+        public MapForm()
         {
             InitializeComponent();
             _backgroundImage = mapPictureBox.Image;
@@ -41,7 +41,7 @@ namespace Countries
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
-            e.Graphics.DrawImageUnscaled(_currentImage,0,0);
+            e.Graphics.DrawImageUnscaled(_currentImage,165,12);
         }
     }
 }
